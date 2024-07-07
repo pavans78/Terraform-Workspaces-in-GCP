@@ -72,20 +72,19 @@ Consider a scenario where a GCS Bucket needs to be deployed in three different e
     ```
 
 
-5. format the files and See the execution plan by running the terraform plan command with var-file, var-file is the inputs of the variables:
+5. See the execution plan by running the terraform plan command with var-file, var-file is the inputs of the variables:
 
     ```sh
-       terraform fmt -check
        terraform plan -var-file=_dev.tfvars -out=plan.tfplan
     ```
 
-6. Apply you configuration now by running the command terraform apply, it was created the GCS bucket in the GCP Project:
+6. Apply you configuration now by running the command terraform apply:
 
     ```sh
        terraform apply plans.tfplan
     ```
 
-After successfully terraform apply command, it was updated the state file in the gcs bucket backend under the folder `gcs-bucket-79` and created the state file as`dev.tfstate`.
+After successfully terraform apply command, it was updated the state file in the gcs bucket backend under the folder `gcs-bucket-79` and created the state file as`dev.tfstate`. And it was created the GCS bucket in the GCP Project.
 
 repeated the step 4 to step 6 for the `test` and `prod` workspaces, only in the step 5 I changed the var-file=_test.tfvars and _prod.tfvars for the respective workspaces. 
 
