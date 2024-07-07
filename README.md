@@ -91,9 +91,9 @@ repeated the step 4 to step 6 for the `test` and `prod` workspaces, only in the 
 
 After successfully terraform apply command for the both test and prod, it was created the different GCS bucket in the GCP Project based on the `.tfvars` file in both workspaces and it was updated the state file in the gcs bucket backend under the folder `gcs-bucket-79` and created the state files as `test.tfstate` and `prod.tfstate` for the respective workspace.
 
-Here the list of the state files under the folder `gcs-bucket-79`:
+Here the list of the state files under the folder `gcs-bucket-79` created by the different workspaces:
 
-
+![image](https://github.com/pavans78/Terraform-Workspaces-in-GCP/assets/75356244/bcbbbf16-e359-4a0b-8a39-3ece450aed9e)
 
 
 ### How Workspaces Work
