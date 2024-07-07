@@ -31,9 +31,9 @@ Terraform Workspaces provide a mechanism to manage multiple environments (e.g., 
   terraform workspace delete <workspace_name>
   ```
 
-### Scenario :
+### Practical Usage Scenario
 
-In this repo, I am using the same configuration and same GCS bucket for backends. I created the GCS bucket using the terraform.
+Consider a scenario where a GCS Bucket needs to be deployed in three different environments: dev, test, and prod. Terraform workspaces can streamline this process:
 
 1. Initialize the new Terraform configuration by running the terraform init command in the same directory as the main.tf file:
 
